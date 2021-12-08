@@ -1,1 +1,1 @@
-Drug Store Projcect
+Drug Store Project
