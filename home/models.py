@@ -1,11 +1,14 @@
 from django.db import models
 
+from user.models import Adminstrator
+
 
 class Setting(models.Model):
     STATUS = (
         ('True', 'Mavjud'),
         ('False', 'Mavjud emas'),
     )
+    user = models.ForeignKey(Adminstrator, on_delete=models.CASCADE)
     title = models.CharField(max_length=222)
     description = models.TextField(max_length=255)
     company = models.CharField(max_length=150)
